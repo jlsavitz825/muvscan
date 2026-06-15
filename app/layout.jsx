@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'MüvScan',
-  description: 'AI moving inventory scanner for MÜV'
+  title: 'MÜV Vision Scanner',
+  description: 'AI room-to-inventory scanner for MÜV moving estimates'
 };
 
 export default function RootLayout({ children }) {
