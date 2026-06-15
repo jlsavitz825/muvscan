@@ -1,6 +1,6 @@
-# MüvScan
+# MÜV Vision Scanner
 
-Production AI vision scanner for MÜV moving inventory capture.
+Production AI room-to-inventory scanner for MÜV moving estimates.
 
 ## What changed
 
