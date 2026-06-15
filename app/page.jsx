@@ -1,0 +1,1 @@
+export default function Page(){return <main><h1>MuvScan</h1><p>Production scanner shell.</p></main>}
