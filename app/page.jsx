@@ -6,7 +6,7 @@ const rooms = ['Living Room', 'Bedroom', 'Kitchen', 'Office', 'Dining Room', 'Ga
 const trucks = [
   ['Cargo van', 250], ['10 ft truck', 400], ['15 ft truck', 750], ['20 ft truck', 1000], ['26 ft truck', 1700]
 ];
-const storeKey = 'muvscan.inventory.v3';
+const storeKey = 'muv-vision.inventory.v3';
 
 function truckFor(cuft) {
   const hit = trucks.find(([, cap]) => cuft <= cap);
@@ -21,7 +21,7 @@ function downloadJson(data) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `muvscan-estimate-${new Date().toISOString().slice(0,10)}.json`;
+  a.download = `muv-vision-estimate-${new Date().toISOString().slice(0,10)}.json`;
   a.click();
   URL.revokeObjectURL(url);
 }
@@ -136,10 +136,10 @@ export default function Page() {
 
   return <main className="shell">
     <section className="cameraPanel">
-      <header><div className="brand"><b>M</b><span><strong>MüvScan</strong><small>AI moving inventory scanner</small></span></div><em>{status}</em></header>
+      <header><div className="brand"><b>M</b><span><strong>MÜV Vision Scanner</strong><small>Room-to-inventory AI for moving estimates</small></span></div><em>{status}</em></header>
       <div className="camera">
         <video ref={videoRef} playsInline muted autoPlay />
-        {!ready && <div className="overlay"><h1>Vision scanner</h1><p>Camera-first inventory capture for faster MÜV estimates.</p><button onClick={startCamera}>Start camera</button>{error && <p className="err">{error}</p>}</div>}
+        {!ready && <div className="overlay"><h1>MÜV Vision</h1><p>Camera-first inventory capture for faster MÜV estimates.</p><button onClick={startCamera}>Start camera</button>{error && <p className="err">{error}</p>}</div>}
         {review.map(item => <button key={item.id} className="box" onClick={() => add(item)} style={{ left: `${item.bbox.x*100}%`, top: `${item.bbox.y*100}%`, width: `${item.bbox.w*100}%`, height: `${item.bbox.h*100}%` }}><span>{titleCase(item.name)}</span></button>)}
       </div>
       <canvas ref={canvasRef} hidden />
