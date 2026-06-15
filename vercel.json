@@ -1,0 +1,1 @@
+{"framework":"nextjs","functions":{"app/api/scan/route.js":{"maxDuration":30}}}
