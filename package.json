@@ -1,1 +1,1 @@
-{"name":"muvscan","version":"2.0.0","private":true,"dependencies":{"next":"^15.5.0","react":"^19.1.0","react-dom":"^19.1.0"}}
+{"name":"muvscan","version":"2.0.0","private":true,"dependencies":{"next":"^15.5.0","react":"^19.1.0","react-dom":"^19.1.0"},"devDependencies":{"typescript":"^5.8.0"}}
