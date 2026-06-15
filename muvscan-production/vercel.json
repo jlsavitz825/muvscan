@@ -2,6 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "regions": ["iad1"],
+  "installCommand": "yarn install --non-interactive --ignore-engines",
+  "buildCommand": "yarn build",
   "functions": {
     "app/api/scan/route.ts": {
       "maxDuration": 30,
