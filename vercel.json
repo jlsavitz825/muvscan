@@ -1,1 +1,1 @@
-{"framework":"nextjs","buildCommand":"npx next build","functions":{"app/api/scan/route.js":{"maxDuration":30}}}
+{"framework":"nextjs","buildCommand":"npx next build"}
